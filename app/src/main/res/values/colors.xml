@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //Colores del proyecto
+    <color name="verde">#75C9AF</color>
+    <color name="naranja">#E1AA70</color>
+    <color name="azul">#0033ff</color>
 </resources>
