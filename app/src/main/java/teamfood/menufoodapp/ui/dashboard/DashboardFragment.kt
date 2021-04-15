@@ -1,5 +1,6 @@
 package teamfood.menufoodapp.ui.dashboard
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,21 +11,25 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import teamfood.menufoodapp.R
 
+
 class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         dashboardViewModel =
                 ViewModelProvider(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+
+        val nombre_usuario: TextView = root.findViewById(R.id.nombre_usuario)
+
+
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
         return root
     }
