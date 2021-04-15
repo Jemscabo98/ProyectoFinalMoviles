@@ -9,69 +9,29 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/imgPerfil"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/chef"
-                    app:shapeAppearanceOverlay="@style/circular"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:layout_gravity="center_vertical">
-
-                        <TextView
-                            android:id="@+id/nombre_usuario"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:textColor="@color/verde"
-                            android:fontFamily="@font/cocogoose_pro"
-                            android:text="Erik Galvan"
-                            />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/round_button"
-                        />
-
-                        <TextView
-                            android:id="@+id/rango_usuario"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            android:textSize="20sp"
-                            android:textColor="@color/verde"
-                            android:fontFamily="@font/cocogoose_pro"
-                            android:text="Principiante"
-                            />
-
-                </LinearLayout>
-
-            </LinearLayout>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </LinearLayout>
 
     </ScrollView>
+
 
 </LinearLayout>
