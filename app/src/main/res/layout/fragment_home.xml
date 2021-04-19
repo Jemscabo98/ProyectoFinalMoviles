@@ -41,7 +41,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/verde"
                         android:fontFamily="@font/cocogoose_pro"
                         android:text="Erik Galvan"
@@ -60,7 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:textColor="@color/verde"
                         android:fontFamily="@font/cocogoose_pro"
                         android:text="Principiante"
@@ -69,6 +69,51 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                android:text="Ingredientes Favoritos:"
+                android:textSize="15sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_double_margin">
+
+                <GridView
+                    android:id="@+id/gridIngredientesFav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_double_margin">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_button"
+                    android:text="Hola mundo"/>
+
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
