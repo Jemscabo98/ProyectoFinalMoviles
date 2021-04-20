@@ -9,7 +9,7 @@
 
 
     <ScrollView
-        android:layout_width="180dp"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_gravity="center">
@@ -20,15 +20,16 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_gravity="center">
 
                 <TextView
                     android:id="@+id/disfruta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="70dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
                     android:text="Disfruta"
@@ -59,18 +60,72 @@
 
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/pizza_img"
+                    app:shapeAppearanceOverlay="@style/circular" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPizzaClasica"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:alpha="0.5"
+                    android:background="@color/teal_700"
+                    app:shapeAppearanceOverlay="@style/circular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/pizzaclasica"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/chiken_img"
+                    app:shapeAppearanceOverlay="@style/circular" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/cake_img"
+                    app:shapeAppearanceOverlay="@style/circular" />
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="130dp">
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:id="@+id/dietas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
                     android:text="Dietas"
@@ -84,7 +139,6 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/round_button" />
-
             </LinearLayout>
 
         </LinearLayout>
