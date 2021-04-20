@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Gustos">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Tu comida"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="38sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="tus gustos"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="38sp" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Selecciona los ingredientes con los que"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="sueles contar, para brindarte la mejor"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="experiencia"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="60dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_pierna_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carne"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="60dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_banana_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frutas"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_zanahoria_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetales"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_pimienta_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especias"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_huevos_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Huevos"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="54dp">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/icon_apio_xxxhdpi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picante"
+                android:textSize="30sp"
+                android:textColor="@color/verde"
+                android:fontFamily="@font/cocogoose_pro"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

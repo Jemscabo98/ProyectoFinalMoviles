@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuFoodApp">
+        <activity android:name=".Dietas"></activity>
+        <activity android:name=".Mexicana" />
+        <activity android:name=".Gustos" />
+        <activity android:name=".Vegetales" />
+        <activity android:name=".Especias" />
+        <activity android:name=".Carne" />
+        <activity android:name=".Ingredientes" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

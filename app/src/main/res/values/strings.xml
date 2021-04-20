@@ -5,5 +5,9 @@
     <string name="title_notifications">Explorar</string>
     <string name="disfruta">Disfruta</string>
     <string name="todo">TODO</string>
+    <string name="ingredientes">INGREDIENTES</string>
+    <string name="dietas">DIETAS</string>
+    <string name="mexicana">MEXICANA</string>
+    <string name="aprende">APRENDE</string>
 
 </resources>
