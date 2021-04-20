@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Dietas">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:background="@drawable/salad2_img"
+            app:shapeAppearanceOverlay="@style/circular"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="300dp"
+            android:layout_height="140dp"
+            android:background="@color/teal_700"
+            android:alpha="0.5"
+            app:shapeAppearanceOverlay="@style/circular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="@string/dietas"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Selecciona tu dieta"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_dieta_xxxhdpi"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Vetariano"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_espinaca_xxxhdpi"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Vegano"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="20sp" />
+
+</LinearLayout>

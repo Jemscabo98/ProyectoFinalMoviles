@@ -14,6 +14,10 @@
     <string name="soporte5">Ingredientes</string>
     <string name="soporte6">La App Falla</string>
     <string name="soporte7">Otro</string>
+    <string name="ingredientes">INGREDIENTES</string>
+    <string name="dietas">DIETAS</string>
+    <string name="mexicana">MEXICANA</string>
+    <string name="aprende">APRENDE</string>
 
 
 </resources>
