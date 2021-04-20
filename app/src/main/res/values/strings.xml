@@ -5,5 +5,14 @@
     <string name="title_notifications">Explorar</string>
     <string name="disfruta">Disfruta</string>
     <string name="todo">TODO</string>
+    <string name="soporte">Soporte</string>
+    <string name="soporte1">¿Tienes alguna duda?</string>
+    <string name="soporte2">¿Puedes borrar recetas?</string>
+    <string name="soporte3">¿Cómo subo recetas?</string>
+    <string name="soporte4">¿Algo no funciona?</string>
+    <string name="soporte5">Ingredientes</string>
+    <string name="soporte6">La App Falla</string>
+    <string name="soporte7">Otro</string>
+
 
 </resources>
