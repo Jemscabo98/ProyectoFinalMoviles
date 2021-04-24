@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        
 
         /*val navView: BottomNavigationView = findViewById(R.id.nav_view)
         //val signInButton: SignInButton = findViewById(R.id.sign_in_button)
