@@ -6,6 +6,8 @@
     <string name="disfruta">Disfruta</string>
     <string name="todo">TODO</string>
     <string name="pizzaclasica">Pizza clasica</string>
+
+    <!-- Activity Soporte -->
     <string name="soporte">Soporte</string>
     <string name="soporte1">¿Tienes alguna duda?</string>
     <string name="soporte2">¿Puedes borrar recetas?</string>
@@ -14,10 +16,21 @@
     <string name="soporte5">Ingredientes</string>
     <string name="soporte6">La App Falla</string>
     <string name="soporte7">Otro</string>
+
+    <!-- Activity Registrar Receta -->
+    <string name="receta">Nombre de la receta...</string>
+    <string name="receta1">Dificultad</string>
+    <string name="receta2">Ingredientes</string>
+    <string name="receta3">Pasos...</string>
+    <string name="receta4">Pasos:</string>
+
+    <!-- Otros -->
     <string name="ingredientes">INGREDIENTES</string>
     <string name="dietas">DIETAS</string>
     <string name="mexicana">MEXICANA</string>
     <string name="aprende">APRENDE</string>
+    <string name="lorem_Ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">activity_login</string>

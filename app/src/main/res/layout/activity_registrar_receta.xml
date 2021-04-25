@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarReceta"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+
+            <ImageView
+                android:id="@+id/imgCategoria"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_manzana_xxxhdpi"
+                android:background="@drawable/round_button"/>
+
+            <EditText
+                android:id="@+id/nombreReceta"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_background"
+                android:text="@string/receta"
+                android:textColor="@color/naranja"
+                android:textSize="18sp"
+                android:fontFamily="@font/cocogoose_pro"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingLeft="@dimen/activity_horizontal_double_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:textColor="@color/verde"
+                android:textSize="23sp"
+                android:fontFamily="@font/cocogoose_pro"
+                android:text="@string/receta1"
+                android:layout_gravity="center"/>
+
+            <RatingBar
+                android:id="@+id/dificultLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="true"
+                android:rating="3.5"/>
+
+            <Button
+                android:id="@+id/btnIngredientes"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_button"
+                android:text="@string/receta2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/cocogoose_pro"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingLeft="@dimen/activity_horizontal_double_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+
+                <GridView
+                    android:id="@+id/gridRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin">
+                </GridView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/pasosRecetas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background"
+                android:text="@string/receta3"
+                android:textColor="@color/naranja"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="@dimen/activity_horizontal_double_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/receta4"
+                android:textColor="@color/verde"
+                android:textSize="23sp"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+            <TextView
+                android:id="@+id/txtPasosReceta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_Ipsum"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

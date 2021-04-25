@@ -20,7 +20,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/icon_manzana_xxxhdpi"
-            android:background="@drawable/round_button"/>
+            android:background="@drawable/round_button"
+            android:layout_gravity="center_horizontal"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
 
         <TextView
             android:id="@+id/txtCategoriaReceta"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="25sp"
