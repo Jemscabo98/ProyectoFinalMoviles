@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Recetas"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fondo_trabajo">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,7 +31,7 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:background="@drawable/round_button"
             />
-        .
+
 
         <TextView
             android:id="@+id/txtCategoriaReceta"

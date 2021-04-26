@@ -2,8 +2,10 @@ package teamfood.menufoodapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.tasks.OnCompleteListener
 import kotlinx.android.synthetic.main.activity_principal.*
+
 
 
 class PrincipalActivity : AppCompatActivity() {
