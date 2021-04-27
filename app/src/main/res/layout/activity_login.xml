@@ -9,19 +9,43 @@
     android:paddingTop= "@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingLeft= "@dimen/activity_horizontal_margin"
-    android:background="@drawable/fondo_trabajo">
+    android:background="@drawable/salad3_img"
+    android:alpha="0.5">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPizzaClasica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/teal_700" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inicio de Sesión"
-        android:textSize="30sp"
+        android:text="¡Hola!"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
 
         app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrate con:"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        app:layout_constraintVertical_bias="0.6" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
