@@ -65,6 +65,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="60dp">
             <ImageView
+                android:id="@+id/ingCarne"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_pierna_xxxhdpi"/>
@@ -109,6 +110,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="50dp">
             <ImageView
+                android:id="@+id/ingVerd"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_zanahoria_xxxhdpi"/>
@@ -128,6 +130,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="15dp">
             <ImageView
+                android:id="@+id/ingEsp"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_pimienta_xxxhdpi"/>
