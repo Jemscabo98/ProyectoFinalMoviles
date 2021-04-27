@@ -10,6 +10,8 @@ import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_explorar.*
+import kotlinx.android.synthetic.main.fragment_notifications.*
 
 class Explorar : AppCompatActivity() {
     private var adaptador: AdaptadorIng?=null
@@ -71,6 +73,16 @@ class Explorar : AppCompatActivity() {
     fun llenar(eleccion: String){
         if(eleccion=="carne"){
             fillCarne()
+            text_explorar.setText("Carne")
+            icon_exp.setImageResource(R.drawable.icon_pierna_xxxhdpi)
+        } else if(eleccion=="verdura"){
+            fillVerduras()
+            text_explorar.setText("Carne")
+            icon_exp.setImageResource(R.drawable.icon_zanahoria_xxxhdpi)
+        } else if(eleccion=="especia"){
+            fillEspecias()
+            text_explorar.setText("Verduras")
+            icon_exp.setImageResource(R.drawable.icon_pimienta_xxxhdpi)
         }
     }
 
@@ -82,11 +94,19 @@ class Explorar : AppCompatActivity() {
         ingredientes.add(Ingrediente(R.drawable.icon_pescado_xxxhdpi, "Pescado"))
     }
 
-    fun fillFrutas(){
-        ingredientes.add(Ingrediente(R.drawable.icon_pierna_xxxhdpi, "Piernil"))
-        ingredientes.add(Ingrediente(R.drawable.icon_jamon_xxxhdpi, "Jamon"))
-        ingredientes.add(Ingrediente(R.drawable.icon_pollo_xxxhdpi, "Pollo"))
-        ingredientes.add(Ingrediente(R.drawable.icon_carne_xxxhdpi, "Res"))
-        ingredientes.add(Ingrediente(R.drawable.icon_pescado_xxxhdpi, "Pescado"))
+    fun fillVerduras(){
+        ingredientes.add(Ingrediente(R.drawable.icon_zanahoria_xxxhdpi, "Zanahoria"))
+        ingredientes.add(Ingrediente(R.drawable.icon_cebolla_xxxhdpi, "Cebolla"))
+        ingredientes.add(Ingrediente(R.drawable.icon_rabano_xxxhdpi, "Rabano"))
+        ingredientes.add(Ingrediente(R.drawable.icon_apio_xxxhdpi, "Apio"))
+        ingredientes.add(Ingrediente(R.drawable.icon_brocoli_xxxhdpi, "Brocoli"))
+    }
+
+    fun fillEspecias(){
+        ingredientes.add(Ingrediente(R.drawable.icon_pimienta_xxxhdpi, "Pimienta"))
+        ingredientes.add(Ingrediente(R.drawable.icon_canela_xxxhdpi, "Canela"))
+        ingredientes.add(Ingrediente(R.drawable.icon_sal_xxxhdpi, "Sal"))
+        ingredientes.add(Ingrediente(R.drawable.icon_harina_xxxhdpi, "Harina"))
+        ingredientes.add(Ingrediente(R.drawable.icon_levadura_xxxhdpi, "Levadura"))
     }
 }
