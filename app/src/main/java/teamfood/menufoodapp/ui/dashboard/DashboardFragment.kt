@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import teamfood.menufoodapp.Pizzaclasica
 import teamfood.menufoodapp.R
 import teamfood.menufoodapp.Recetas
 
@@ -33,7 +34,7 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
 
             btnPizzaClasica.setOnClickListener{
-                val intent: Intent = Intent(requireActivity(), Recetas::class.java)
+                val intent: Intent = Intent(requireActivity(), Pizzaclasica::class.java)
                 startActivity(intent)
             }
 

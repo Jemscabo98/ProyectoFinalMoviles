@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondo_trabajo"
     tools:context=".ui.dashboard.DashboardFragment">
 
 
     <ScrollView
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,8 +23,8 @@
             <LinearLayout
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/disfruta"
@@ -62,7 +63,7 @@
 
             <RelativeLayout
                 android:layout_width="300dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -90,7 +91,7 @@
 
             <RelativeLayout
                 android:layout_width="300dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp">
 
@@ -103,7 +104,7 @@
 
             <RelativeLayout
                 android:layout_width="300dp"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp">
 
@@ -117,9 +118,9 @@
             <LinearLayout
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/dietas"
@@ -140,6 +141,111 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/round_button" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="60dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/salad3_img"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/salad3_img"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/comparteTuTalento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cocogoose_pro"
+                    android:text="Comparte tu talento"
+                    android:textAlignment="center"
+                    android:textColor="@color/verde"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/salad_img" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/deCheff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cocogoose_pro"
+                    android:text="De cheff a cheff"
+                    android:textAlignment="center"
+                    android:textColor="@color/verde"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/salad2_img" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+            </RelativeLayout>
+
 
         </LinearLayout>
 
