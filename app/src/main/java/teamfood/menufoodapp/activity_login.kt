@@ -88,7 +88,7 @@ class activity_login : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("id", acct.getId())
             intent.putExtra("name", acct.getDisplayName())
-            intent.putExtra("email", acct.getEmail())
+            intent.putExtra("picture", acct.photoUrl.toString())
             startActivityForResult(intent, LOG_OUT)
         }
     }

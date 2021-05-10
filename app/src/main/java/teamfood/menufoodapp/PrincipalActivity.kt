@@ -18,9 +18,9 @@ class PrincipalActivity : AppCompatActivity() {
 
         if (bundle != null){
             val name = bundle.getString("name")
-            val email = bundle.getString("email")
+            //val email = bundle.getString("email")
             tv_nombre.setText(name)
-            tv_email.setText(email)
+            //tv_email.setText(email)
         }
 
         btn_cerrar.setOnClickListener{

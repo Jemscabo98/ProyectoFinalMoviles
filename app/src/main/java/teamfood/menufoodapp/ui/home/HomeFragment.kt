@@ -10,10 +10,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.imageview.ShapeableImageView
 import teamfood.menufoodapp.R
 import teamfood.menufoodapp.Recetas
 import teamfood.menufoodapp.RegistrarReceta
 import teamfood.menufoodapp.Soporte
+import java.net.URL
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +36,23 @@ class HomeFragment : Fragment() {
         val btnAyuda: Button = root.findViewById(R.id.btnAyuda)
         val btnSubirReceta: Button = root.findViewById(R.id.btnSubirReceta)
         val nombre_usuario: TextView = root.findViewById(R.id.nombre_usuario)
+        val img_usuario: ShapeableImageView = root.findViewById(R.id.imgPerfil)
+
+        var bundle: Bundle? = this.getArguments()
+
+        if (bundle != null){
+            val text = bundle.getString("name")
+            val picture = bundle.getString("picture")
+
+            var url: URL = URL(picture)
+            //var btm: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+
+            nombre_usuario.setText(text)
+            //img_usuario.setImageBitmap(btm)
+        }
+        else{
+            nombre_usuario.setText("Fallo")
+        }
 
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
 

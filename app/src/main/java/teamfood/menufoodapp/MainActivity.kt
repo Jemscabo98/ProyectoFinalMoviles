@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.Task
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_principal.*
+import teamfood.menufoodapp.ui.home.HomeFragment
 
 //import kotlinx.android.synthetic.main.activity_main.*
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Barra de navegación
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
@@ -43,14 +45,28 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        /*
-        val bundle = intent.extras
+        //Mandar los datos de Google a HomeFragment para el perfil
+        var bundle: Bundle? = intent.extras
 
         if (bundle != null){
+            //Consigues los atributos mandados
             val name = bundle.getString("name")
-            val photo = bundle.getInt("img")
+            val picture = bundle.getString("picture")
+
+            Toast.makeText(this,name + picture,Toast.LENGTH_LONG )
+
+            //Los guardas en otro Bundle para mandar
+            var enviar: Bundle = Bundle()
+            enviar.putString("name", name)
+            enviar.putString("picture", picture)
+
+            //Creas los argumentos del fragmento
+            var fragClass: HomeFragment = HomeFragment()
+            fragClass.setArguments(enviar)
         }
-        */
+        else{
+            Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG )
+        }
 
     }
 }

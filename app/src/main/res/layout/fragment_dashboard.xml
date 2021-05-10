@@ -184,7 +184,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/comparteTuTalento"
+                    android:id="@+id/comparte"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -200,15 +200,20 @@
                     android:layout_height="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/salad_img" />
+                    android:background="@drawable/round_button" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp">
 
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/chiken_img"
+                    app:shapeAppearanceOverlay="@style/circular" />
             </RelativeLayout>
 
             <LinearLayout
@@ -219,13 +224,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/deCheff"
+                    android:id="@+id/deChefAChef"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="De cheff a cheff"
+                    android:text="De chef a chef"
                     android:textAlignment="center"
                     android:textColor="@color/verde"
                     android:textSize="30sp" />
@@ -235,15 +240,20 @@
                     android:layout_height="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/salad2_img" />
+                    android:background="@drawable/round_button" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp">
 
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/chiken_img"
+                    app:shapeAppearanceOverlay="@style/circular" />
             </RelativeLayout>
 
 
