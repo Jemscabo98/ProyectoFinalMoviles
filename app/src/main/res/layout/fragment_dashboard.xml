@@ -247,7 +247,8 @@
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="@dimen/activity_vertical_double_margin">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="300dp"

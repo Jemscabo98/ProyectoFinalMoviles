@@ -41,7 +41,8 @@
                 android:layout_width="300dp"
                 android:layout_height="140dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="25dp">
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="300dp"
                     android:layout_height="150dp"
@@ -125,7 +126,8 @@
             <RelativeLayout
                 android:layout_width="300dp"
                 android:layout_height="140dp"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_vertical_double_margin">
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="300dp"
                     android:layout_height="150dp"

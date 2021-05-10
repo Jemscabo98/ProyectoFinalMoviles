@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
         var bundle: Bundle? = this.getArguments()
 
         if (bundle != null){
-            val text = bundle.getString("name")
+            val text = bundle.getString("name", "Nombre predeterminado")
             val picture = bundle.getString("picture")
 
             var url: URL = URL(picture)

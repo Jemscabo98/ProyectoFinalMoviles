@@ -46,14 +46,14 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         //Mandar los datos de Google a HomeFragment para el perfil
-        var bundle: Bundle? = intent.extras
+        var bundle = intent.extras
 
         if (bundle != null){
             //Consigues los atributos mandados
             val name = bundle.getString("name")
             val picture = bundle.getString("picture")
 
-            Toast.makeText(this,name + picture,Toast.LENGTH_LONG )
+            //Toast.makeText(this,name + picture,Toast.LENGTH_LONG )
 
             //Los guardas en otro Bundle para mandar
             var enviar: Bundle = Bundle()
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             fragClass.setArguments(enviar)
         }
         else{
-            Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG )
+            //Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG )
         }
 
     }
