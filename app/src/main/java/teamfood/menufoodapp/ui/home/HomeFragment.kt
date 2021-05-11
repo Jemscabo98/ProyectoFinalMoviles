@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -39,6 +40,10 @@ class HomeFragment : Fragment() {
         val img_usuario: ShapeableImageView = root.findViewById(R.id.imgPerfil)
 
         var bundle: Bundle? = this.getArguments()
+
+//        val text = bundle!!.getString("name", "Nombre predeterminado")
+
+        //Toast.makeText(activity, text, Toast.LENGTH_LONG ).show()
 
         if (bundle != null){
             val text = bundle.getString("name", "Nombre predeterminado")

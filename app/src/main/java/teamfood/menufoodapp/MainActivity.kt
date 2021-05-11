@@ -6,6 +6,8 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -32,10 +34,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         //Barra de navegación
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        val navController = findNavController(R.id.navigation_home)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
@@ -50,10 +53,11 @@ class MainActivity : AppCompatActivity() {
 
         if (bundle != null){
             //Consigues los atributos mandados
-            val name = bundle.getString("name")
+            val name = "Algo"
+                //bundle.getString("name")
             val picture = bundle.getString("picture")
 
-            //Toast.makeText(this,name + picture,Toast.LENGTH_LONG )
+            Toast.makeText(this,name + picture,Toast.LENGTH_LONG ).show()
 
             //Los guardas en otro Bundle para mandar
             var enviar: Bundle = Bundle()
@@ -61,11 +65,16 @@ class MainActivity : AppCompatActivity() {
             enviar.putString("picture", picture)
 
             //Creas los argumentos del fragmento
-            var fragClass: HomeFragment = HomeFragment()
-            fragClass.setArguments(enviar)
+            var fragClass = HomeFragment()
+            fragClass.arguments = enviar
+
+            val transaction: FragmentTransaction  = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment, fragClass)
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
         else{
-            //Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG )
+            Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG ).show()
         }
 
     }
