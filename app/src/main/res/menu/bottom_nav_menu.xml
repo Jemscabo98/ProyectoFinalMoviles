@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/icon_mexicano_xxxhdpi"
+        android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_dashboard"
@@ -13,9 +17,5 @@
         android:icon="@drawable/icon_explorar_xxxhdpi"
         android:title="@string/title_notifications" />
 
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/icon_mexicano_xxxhdpi"
-        android:title="@string/title_home" />
 
 </menu>
