@@ -2,7 +2,10 @@ package teamfood.menufoodapp.ui.home
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.StrictMode
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,20 +17,25 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.imageview.ShapeableImageView
 import teamfood.menufoodapp.*
+import java.lang.Exception
 import java.net.URL
+
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         homeViewModel =
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         val btnRecetasCompletas: Button = root.findViewById(R.id.btnRecetasCompletas)
         val btnRecetasSubidas: Button = root.findViewById(R.id.btnRecetasSubidas)
@@ -39,6 +47,20 @@ class HomeFragment : Fragment() {
 
         lookData()
 
+        try {
+            val url: URL = URL(pic)
+            val bitmap: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+
+            img_usuario.setImageBitmap(bitmap)
+
+        } catch (e: Exception){
+            Toast.makeText(activity, "No se pudo cargar imagen", Toast.LENGTH_LONG).show()
+
+            val url: URL = URL("https://media-exp1.licdn.com/dms/image/C5103AQGzZur0sCKtlQ/profile-displayphoto-shrink_200_200/0/1562701015334?e=1624492800&v=beta&t=27ZFrh83xZV2ef0jzGQ9FwRmRhIbtQ6EsNsMrqlLEcg")
+            val bitmap: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+
+            img_usuario.setImageBitmap(bitmap)
+        }
         nombre_usuario.setText(name)
 
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
@@ -72,9 +94,13 @@ class HomeFragment : Fragment() {
         return root
     }
 
+
     fun lookData(){
+        val aux1 = "https://media-exp1.licdn.com/dms/image/C5103AQGzZur0sCKtlQ/profile-displayphoto-shrink_200_200/0/1562701015334?e=1624492800&v=beta&t=27ZFrh83xZV2ef0jzGQ9FwRmRhIbtQ6EsNsMrqlLEcg"
+
         val sharedPref = activity?.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE) ?: return
         name = sharedPref.getString(NAME, "No Name")
-        pic = sharedPref.getString(PIC, "")
+        pic = sharedPref.getString(PIC, aux1)
     }
+
 }
