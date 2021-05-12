@@ -1,5 +1,6 @@
 package teamfood.menufoodapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +18,12 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 const val RC_SIGN_IN = 343
 const val LOG_OUT = 234
+const val SHARED_PREFS: String = "sharedPrefs"
+const val NAME: String = "name"
+const val PIC: String = "picture"
 
+var name: String? = ""
+var pic: String? = ""
 
 class activity_login : AppCompatActivity() {
 
@@ -86,9 +92,14 @@ class activity_login : AppCompatActivity() {
 
         if (acct != null) {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("id", acct.getId())
-            intent.putExtra("name", acct.getDisplayName())
-            intent.putExtra("picture", acct.photoUrl.toString())
+
+            val sharedPref =  this.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE) ?: return
+            with (sharedPref.edit()) {
+                putString(NAME, acct.getDisplayName())
+                putString(PIC, acct.photoUrl.toString())
+                commit()
+            }
+
             startActivityForResult(intent, LOG_OUT)
         }
     }

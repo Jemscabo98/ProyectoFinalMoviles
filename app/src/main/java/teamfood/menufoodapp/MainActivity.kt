@@ -1,5 +1,6 @@
 package teamfood.menufoodapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -34,11 +35,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         //Barra de navegación
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.navigation_home)
+        val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
@@ -47,35 +47,6 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        //Mandar los datos de Google a HomeFragment para el perfil
-        var bundle = intent.extras
-
-        if (bundle != null){
-            //Consigues los atributos mandados
-            val name = "Algo"
-                //bundle.getString("name")
-            val picture = bundle.getString("picture")
-
-            Toast.makeText(this,name + picture,Toast.LENGTH_LONG ).show()
-
-            //Los guardas en otro Bundle para mandar
-            var enviar: Bundle = Bundle()
-            enviar.putString("name", name)
-            enviar.putString("picture", picture)
-
-            //Creas los argumentos del fragmento
-            var fragClass = HomeFragment()
-            fragClass.arguments = enviar
-
-            val transaction: FragmentTransaction  = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment, fragClass)
-            transaction.addToBackStack(null)
-            transaction.commit()
-        }
-        else{
-            Toast.makeText(this,"No se pasaron los datos",Toast.LENGTH_LONG ).show()
-        }
 
     }
 }

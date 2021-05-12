@@ -1,5 +1,6 @@
 package teamfood.menufoodapp.ui.home
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,10 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.imageview.ShapeableImageView
-import teamfood.menufoodapp.R
-import teamfood.menufoodapp.Recetas
-import teamfood.menufoodapp.RegistrarReceta
-import teamfood.menufoodapp.Soporte
+import teamfood.menufoodapp.*
 import java.net.URL
 
 class HomeFragment : Fragment() {
@@ -39,25 +37,9 @@ class HomeFragment : Fragment() {
         val nombre_usuario: TextView = root.findViewById(R.id.nombre_usuario)
         val img_usuario: ShapeableImageView = root.findViewById(R.id.imgPerfil)
 
-        var bundle: Bundle? = this.getArguments()
+        lookData()
 
-//        val text = bundle!!.getString("name", "Nombre predeterminado")
-
-        //Toast.makeText(activity, text, Toast.LENGTH_LONG ).show()
-
-        if (bundle != null){
-            val text = bundle.getString("name", "Nombre predeterminado")
-            val picture = bundle.getString("picture")
-
-            var url: URL = URL(picture)
-            //var btm: Bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-
-            nombre_usuario.setText(text)
-            //img_usuario.setImageBitmap(btm)
-        }
-        else{
-            nombre_usuario.setText("Fallo")
-        }
+        nombre_usuario.setText(name)
 
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
 
@@ -88,5 +70,11 @@ class HomeFragment : Fragment() {
 
         })
         return root
+    }
+
+    fun lookData(){
+        val sharedPref = activity?.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE) ?: return
+        name = sharedPref.getString(NAME, "No Name")
+        pic = sharedPref.getString(PIC, "")
     }
 }
