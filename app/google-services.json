@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "852258029393",
+    "project_id": "menufoodapp-b125f",
+    "storage_bucket": "menufoodapp-b125f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852258029393:android:df5c735bf540d59bcd9d70",
+        "android_client_info": {
+          "package_name": "teamfood.menufoodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852258029393-hnsjgeverpcsnsgn1gdska37lt596mt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxi4pG81AWOkLoF8GV-nLYKmMm1d5X2kA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852258029393-hnsjgeverpcsnsgn1gdska37lt596mt0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

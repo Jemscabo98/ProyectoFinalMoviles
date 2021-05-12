@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuFoodApp">
-        <activity android:name=".Pizzaclasica"/>
+        <activity android:name=".ContrasenaActivity"></activity>
+        <activity android:name=".RegistroActivity" />
+        <activity android:name=".LoginActivityFirebase" />
+        <activity android:name=".Pizzaclasica" />
         <activity android:name=".Ingredientes" />
         <activity android:name=".Mexicana" />
         <activity android:name=".RegistrarReceta" />
@@ -25,9 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

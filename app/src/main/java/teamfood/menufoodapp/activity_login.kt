@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -44,6 +45,13 @@ class activity_login : AppCompatActivity() {
             val signInIntent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+
+
+        loginFirebase.setOnClickListener {
+            val intent: Intent = Intent(this, LoginActivityFirebase::class.java)
+            startActivity(intent)
+        }
+
     }
 
     override fun onStart() {
