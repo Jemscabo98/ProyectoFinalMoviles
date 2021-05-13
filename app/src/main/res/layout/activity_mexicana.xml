@@ -11,19 +11,11 @@
         android:layout_width="300dp"
         android:layout_height="140dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="25dp">
-        <com.google.android.material.imageview.ShapeableImageView
+        android:layout_marginBottom="10dp">
+        <ImageView
             android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:background="@drawable/chiken_img"
-            app:shapeAppearanceOverlay="@style/circular"/>
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:background="@color/teal_700"
-            android:alpha="0.5"
-            app:shapeAppearanceOverlay="@style/circular"/>
+            android:layout_height="120dp"
+            android:background="@drawable/titulo_1"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +29,7 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="5dp"
         android:layout_gravity="center"
         android:background="@drawable/round_button" />

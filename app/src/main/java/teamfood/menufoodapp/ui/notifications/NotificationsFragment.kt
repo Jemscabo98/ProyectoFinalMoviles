@@ -10,10 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import teamfood.menufoodapp.Dieta
-import teamfood.menufoodapp.Mexicana
-import teamfood.menufoodapp.R
-import teamfood.menufoodapp.Recetas
+import teamfood.menufoodapp.*
 
 class NotificationsFragment : Fragment() {
 
@@ -36,22 +33,22 @@ class NotificationsFragment : Fragment() {
 
         })
         imgIng.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Dieta::class.java)
+            val intent: Intent = Intent(requireActivity(), Explorar::class.java).apply{}
+            startActivity(intent)
+        }
+
+        imgDiet.setOnClickListener(){
+            val intent: Intent = Intent(requireActivity(), Dieta::class.java).apply{}
+            startActivity(intent)
+        }
+
+        imgMex.setOnClickListener(){
+            val intent: Intent = Intent(requireActivity(), Mexicana::class.java).apply{}
             startActivity(intent)
         }
 
         imgIng.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Recetas::class.java)
-            startActivity(intent)
-        }
-
-        imgIng.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Recetas::class.java)
-            startActivity(intent)
-        }
-
-        imgIng.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Mexicana::class.java)
+            val intent: Intent = Intent(requireActivity(), Mexicana::class.java).apply{}
             startActivity(intent)
         }
 
