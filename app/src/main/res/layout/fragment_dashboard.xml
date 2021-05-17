@@ -61,35 +61,22 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center">
 
                 <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/pizza_img"
-                    app:shapeAppearanceOverlay="@style/circular" />
-
-                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imgPizzaClasica"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:alpha="0.5"
-                    android:background="@color/teal_700"
+                    android:background="@drawable/completadas_5"
                     app:shapeAppearanceOverlay="@style/circular" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/pizzaclasica"
-                    android:textColor="@color/white"
-                    android:textSize="30sp" />
-            </RelativeLayout>
 
-            <RelativeLayout
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -100,9 +87,9 @@
                     android:layout_height="150dp"
                     android:background="@drawable/chiken_img"
                     app:shapeAppearanceOverlay="@style/circular" />
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
@@ -113,7 +100,7 @@
                     android:layout_height="150dp"
                     android:background="@drawable/cake_img"
                     app:shapeAppearanceOverlay="@style/circular" />
-            </RelativeLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="180dp"
@@ -158,7 +145,7 @@
                         android:layout_height="120dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:background="@drawable/salad3_img"/>
+                        android:background="@drawable/favoritas_4"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -172,7 +159,7 @@
                         android:layout_height="120dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:background="@drawable/salad3_img"/>
+                        android:background="@drawable/favoritas_3"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -203,18 +190,19 @@
                     android:background="@drawable/round_button" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="300dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/chiken_img"
+                <ImageView
+                    android:id="@+id/registrarReceta"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/completadas_6"
                     app:shapeAppearanceOverlay="@style/circular" />
-            </RelativeLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="180dp"
@@ -243,19 +231,19 @@
                     android:background="@drawable/round_button" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="300dp"
-                android:layout_height="150dp"
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="@dimen/activity_vertical_double_margin">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/chiken_img"
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:background="@drawable/completadas_2"
                     app:shapeAppearanceOverlay="@style/circular" />
-            </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>

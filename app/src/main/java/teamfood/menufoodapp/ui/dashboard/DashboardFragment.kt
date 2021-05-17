@@ -10,9 +10,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 import teamfood.menufoodapp.Pizzaclasica
 import teamfood.menufoodapp.R
 import teamfood.menufoodapp.Recetas
+import teamfood.menufoodapp.RegistrarReceta
 
 class DashboardFragment : Fragment() {
 
@@ -30,11 +32,15 @@ class DashboardFragment : Fragment() {
         val nombre_usuario: TextView = root.findViewById(R.id.text_dashboard)
         val btnPizzaClasica: com.google.android.material.imageview.ShapeableImageView = root.findViewById(R.id.imgPizzaClasica)
 
-
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
 
             btnPizzaClasica.setOnClickListener{
                 val intent: Intent = Intent(requireActivity(), Pizzaclasica::class.java)
+                startActivity(intent)
+            }
+
+            registrarReceta.setOnClickListener{
+                val intent: Intent = Intent(requireActivity(), RegistrarReceta::class.java)
                 startActivity(intent)
             }
 
