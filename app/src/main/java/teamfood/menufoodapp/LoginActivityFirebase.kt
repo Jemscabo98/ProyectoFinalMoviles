@@ -1,5 +1,6 @@
 package teamfood.menufoodapp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -64,7 +65,7 @@ class LoginActivityFirebase : AppCompatActivity() {
                 //Log.d(TAG, "signInWithEmail:success")
                 val user = auth.currentUser
                 //updateUI(user)
-
+                guardarNombre(email)
                 val intent: Intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
 
@@ -77,4 +78,22 @@ class LoginActivityFirebase : AppCompatActivity() {
             }
         }
     }
+
+    private fun guardarNombre(email: String){
+
+        var aux = email
+
+        if(email.contains('@')) {
+            val index: Int = email.indexOf('@')
+            aux = email.substring(0, index)
+        }
+        aux = aux.substring(0,1).toUpperCase() + aux.substring(1)
+
+        val sharedPref =  this.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE) ?: return
+        with (sharedPref.edit()) {
+            putString(NAME, aux)
+            commit()
+        }
+    }
+
 }
