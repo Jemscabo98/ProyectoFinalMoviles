@@ -7,10 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.GridView
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import java.io.Serializable
 
 class Recetas : AppCompatActivity() {
@@ -22,6 +19,12 @@ class Recetas : AppCompatActivity() {
         setContentView(R.layout.activity_recetas_grid)
 
         var gridRecetas: GridView = findViewById(R.id.gridRecetas)
+        var btnRegreso: Button = findViewById(R.id.btnVolver)
+
+        btnRegreso.setOnClickListener {
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val bundle = intent.extras
         if(bundle != null){
@@ -33,6 +36,37 @@ class Recetas : AppCompatActivity() {
 
             if (bundle.getString("name") == "RecetasSubidas"){
                 cargarRecetasSubidas()
+
+                var nombre = bundle.getString("nombre")
+                var ingredientes = bundle.getFloat("dificultad")
+                var imagen = bundle.getInt("imagen")
+                var pasos = bundle.getString("pasos")
+
+                var args = bundle.getBundle("BUNDLE")
+                if (args != null) {
+                    var aux = args.getSerializable("ARRAYLIST") as ArrayList<Int>
+
+                    if (nombre != null && pasos!= null) {
+                        var receta: Receta = Receta(
+                            nombre,
+                            imagen,
+                            ingredientes,
+                            aux,
+                            pasos)
+
+                        recetas.add(receta)
+                    }else{
+                        var receta: Receta = Receta(
+                            "nombre",
+                            imagen,
+                            ingredientes,
+                            aux,
+                            "pasos")
+
+                        recetas.add(receta)
+                    }
+                }
+
                 adapter = RecetaAdapter(this, recetas)
                 gridRecetas.adapter = adapter
             }
