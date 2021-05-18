@@ -36,11 +36,9 @@ class RecetaDetail : AppCompatActivity() {
             {
                 var arrayInt = args.getSerializable("ARRAYLIST") as ArrayList<Int>
 
+                adapter = IngredientesAdapter(this, arrayInt)
+                ingredientes.adapter = adapter
 
-                if (arrayInt != null){
-                    adapter = IngredientesAdapter(this, arrayInt)
-                    ingredientes.adapter = adapter
-                }
             }
 
         }

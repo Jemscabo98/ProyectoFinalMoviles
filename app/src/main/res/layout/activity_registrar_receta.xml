@@ -78,7 +78,7 @@
                 android:fontFamily="@font/cocogoose_pro"
                 android:layout_gravity="center_vertical"
                 android:paddingTop="5dp"
-                android:paddingLeft="@dimen/activity_horizontal_double_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_double_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_double_margin"/>
@@ -116,47 +116,30 @@
                 android:paddingLeft="@dimen/activity_horizontal_double_margin"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_double_margin"
-                android:layout_marginLeft="@dimen/activity_horizontal_double_margin"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:text="@string/receta4"
-                android:textColor="@color/verde"
-                android:textSize="23sp"
-                android:fontFamily="@font/montserrat_extrabold"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
-
-            <TextView
-                android:id="@+id/txtPasosReceta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lorem_Ipsum"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:fontFamily="@font/montserrat_medium"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
-
-
-            <Button
-                android:id="@+id/btnRegistrarReceta"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/round_button"
-                android:text="@string/receta5"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:fontFamily="@font/cocogoose_pro"
-                android:layout_gravity="center_vertical"
-                android:paddingTop="5dp"
-                android:paddingLeft="@dimen/activity_horizontal_double_margin"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_double_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
-                android:layout_marginBottom="64dp"/>
+                android:layout_marginBottom="@dimen/activity_vertical_double_margin"/>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btnRegistrarReceta"
+                    android:layout_width="115dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_button"
+                    android:text="@string/receta5"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cocogoose_pro"
+                    android:layout_gravity="bottom|right"
+                    android:paddingTop="3dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                    android:layout_marginBottom="64dp"/>
+            </FrameLayout>
         </LinearLayout>
 
     </ScrollView>

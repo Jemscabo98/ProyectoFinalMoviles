@@ -63,7 +63,7 @@ class LoginActivityFirebase : AppCompatActivity() {
             if (task.isSuccessful) {
                 // Sign in success, update UI with the signed-in user's information
                 //Log.d(TAG, "signInWithEmail:success")
-                val user = auth.currentUser
+                //val user = auth.currentUser
                 //updateUI(user)
                 guardarNombre(email)
                 val intent: Intent = Intent(this, MainActivity::class.java)

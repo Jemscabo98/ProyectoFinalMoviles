@@ -64,7 +64,7 @@ class RegistroActivity : AppCompatActivity() {
                         //Log.d(TAG, "createUserWithEmail:success")
                         Toast.makeText(baseContext, "Authentication Successful.",
                                 Toast.LENGTH_SHORT).show()
-                        val user = auth.currentUser
+                        //val user = auth.currentUser
                         //updateUI(user)
 
                         val intent = Intent(this, LoginActivityFirebase::class.java)
