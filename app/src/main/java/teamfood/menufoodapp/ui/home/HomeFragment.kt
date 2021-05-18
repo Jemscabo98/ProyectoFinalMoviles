@@ -67,16 +67,19 @@ class HomeFragment : Fragment() {
 
             btnRecetasCompletas.setOnClickListener {
                 val intent: Intent = Intent(requireActivity(), Recetas::class.java)
+                intent.putExtra("name", "RecetasCompletas")
                 startActivity(intent)
             }
 
             btnRecetasSubidas.setOnClickListener {
                 val intent: Intent = Intent(requireActivity(), Recetas::class.java)
+                intent.putExtra("name", "RecetasSubidas")
                 startActivity(intent)
             }
 
             btnRecetasFavoritas.setOnClickListener {
                 val intent: Intent = Intent(requireActivity(), Recetas::class.java)
+                intent.putExtra("name", "RecetasFavoritas")
                 startActivity(intent)
             }
 
