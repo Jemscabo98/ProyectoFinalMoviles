@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuFoodApp">
-        <activity android:name=".Recomendaciones"></activity>
+        <activity android:name=".VerIngredientes"></activity>
+        <activity android:name=".Recomendaciones" />
         <activity android:name=".Vegetales" />
         <activity android:name=".Especias" />
         <activity android:name=".RecetaDetail" />

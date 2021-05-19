@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VerIngredientes">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/cocogoose_pro"
+        android:text="Ingredientes"
+        android:textAlignment="center"
+        android:textColor="@color/verde"
+        android:textSize="30sp" />
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/round_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textoPiernil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40sp"/>
+        <TextView
+            android:id="@+id/textoCarne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40sp"/>
+        <TextView
+            android:id="@+id/textoPollo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40sp"/>
+    <ListView
+        android:id="@+id/listIng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"/>
+    </ScrollView>
+
+</LinearLayout>
