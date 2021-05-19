@@ -33,7 +33,7 @@ class NotificationsFragment : Fragment() {
 
         })
         imgIng.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Explorar::class.java).apply{}
+            val intent: Intent = Intent(requireActivity(), Ingredientes::class.java).apply{}
             startActivity(intent)
         }
 
@@ -47,7 +47,7 @@ class NotificationsFragment : Fragment() {
             startActivity(intent)
         }
 
-        imgIng.setOnClickListener(){
+        imgApr.setOnClickListener(){
             val intent: Intent = Intent(requireActivity(), Mexicana::class.java).apply{}
             startActivity(intent)
         }

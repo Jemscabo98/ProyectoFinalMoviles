@@ -9,28 +9,22 @@ class Ingredientes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ingredientes)
-        val ingCarne: ImageView = R.id.ingCarne as ImageView
-        val ingVerd: ImageView = R.id.ingVerd as ImageView
-        val ingEsp: ImageView = R.id.ingEsp as ImageView
+        val ingCarne: ImageView = findViewById(R.id.ingCarne) as ImageView
+        val ingVerd: ImageView = findViewById(R.id.ingVerd) as ImageView
+        val ingEsp: ImageView = findViewById(R.id.ingEsp) as ImageView
 
         ingCarne.setOnClickListener(){
-            val intent: Intent = Intent(this, Explorar::class.java).apply {
-                putExtra("elegido","carne")
-            }
+            val intent: Intent = Intent(this, Carne::class.java)
             startActivity(intent)
         }
 
         ingVerd.setOnClickListener(){
-            val intent: Intent = Intent(this, Explorar::class.java).apply {
-                putExtra("elegido","verdura")
-            }
+            val intent: Intent = Intent(this, Vegetales::class.java)
             startActivity(intent)
         }
 
         ingEsp.setOnClickListener(){
-            val intent: Intent = Intent(this, Explorar::class.java).apply {
-                putExtra("elegido","especia")
-            }
+            val intent: Intent = Intent(this, Especias::class.java)
             startActivity(intent)
         }
     }
