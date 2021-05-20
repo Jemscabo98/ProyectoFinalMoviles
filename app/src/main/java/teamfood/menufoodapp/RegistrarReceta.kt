@@ -4,9 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-import java.io.Serializable
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RegistrarReceta : AppCompatActivity() {
+    private lateinit var storage: FirebaseFirestore
+    private lateinit var usuario: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar_receta)
@@ -19,19 +23,30 @@ class RegistrarReceta : AppCompatActivity() {
         val pasos: EditText = findViewById(R.id.pasosRecetas)
         val btnRegistrar: Button = findViewById(R.id.btnRegistrarReceta)
 
+        storage = FirebaseFirestore.getInstance()
+        usuario = FirebaseAuth.getInstance()
+
 
         btnRegistrar.setOnClickListener {
             var intent = Intent(this, Recetas::class.java)
 
+            val actividad = hashMapOf(
+                    "email" to usuario.currentUser?.email.toString(),
+                    "nombre" to nombreReceta.text.toString(),
+                    "imagen" to randomNum(),
+                    "dificultad" to dificultLevel.rating,
+                    "ingredientes" to randomIng(),
+                    "pasos" to pasos.text.toString(),
+                    "clasificacion" to "RecetasSubidas")
 
-            val args: Bundle = Bundle()
-            args.putSerializable("ARRAYLIST", randomIng())
-            intent.putExtra("name", "RecetasSubidas")
-            intent.putExtra("BUNDLE", args)
-            intent.putExtra("nombre", nombreReceta.text.toString())
-            intent.putExtra("imagen", randomNum())
-            intent.putExtra("pasos", pasos.text.toString())
-            intent.putExtra("dificultad", dificultLevel.rating)
+            storage.collection("receta")
+                    .add(actividad)
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Se agrego la receta", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener{
+                        Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                    }
 
             startActivity(intent)
         }
@@ -61,6 +76,8 @@ class RegistrarReceta : AppCompatActivity() {
         array.add(R.drawable.icon_espinaca_ldpi)
         array.add(R.drawable.icon_sal_ldpi)
         array.add(R.drawable.icon_queso_ldpi)
+
+
 
         return array
     }

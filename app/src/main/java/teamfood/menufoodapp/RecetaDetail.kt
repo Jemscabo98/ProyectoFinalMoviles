@@ -27,8 +27,8 @@ class RecetaDetail : AppCompatActivity() {
 
         if (bundle != null){
             name.setText(bundle.getString("nombre"))
-            imagen.setImageResource(bundle.getInt("imagen"))
-            dificultad.setRating(bundle.getFloat("dificultad"))
+            imagen.setImageResource(bundle.getDouble("imagen").toInt())
+            dificultad.setRating(bundle.getDouble("dificultad").toFloat())
             pasos.setText(bundle.getString("pasos"))
 
             var args = bundle.getBundle("BUNDLE")

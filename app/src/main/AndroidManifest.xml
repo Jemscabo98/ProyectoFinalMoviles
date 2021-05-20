@@ -26,15 +26,16 @@
         <activity android:name=".Dieta" />
         <activity android:name=".Carne" />
         <activity android:name=".PrincipalActivity" />
-        <activity android:name=".activity_login" />
+        <activity android:name=".activity_login">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
