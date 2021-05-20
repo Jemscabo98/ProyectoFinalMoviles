@@ -54,11 +54,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="60dp">
+            android:layout_marginLeft="50dp">
             <ImageView
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/icon_pierna_xxxhdpi"/>
+                android:src="@drawable/icon_chile_xxhdpi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -73,11 +73,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="60dp">
+            android:layout_marginLeft="64dp">
             <ImageView
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/icon_banana_xxxhdpi"/>
+                android:src="@drawable/icon_tomate_xxhdpi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
             <ImageView
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/icon_zanahoria_xxxhdpi"/>
+                android:src="@drawable/icon_mexicano_hdpi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/icon_pimienta_xxxhdpi"/>
+                android:src="@drawable/icon_cebolla_xxxhdpi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
             <ImageView
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:src="@drawable/icon_huevos_xxxhdpi"/>
+                android:src="@drawable/icon_explorar_xhdpi"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -159,24 +159,7 @@
                 android:fontFamily="@font/cocogoose_pro"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="24dp">
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/icon_apio_xxxhdpi"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gorditas"
-                android:textSize="30sp"
-                android:textColor="@color/verde"
-                android:fontFamily="@font/cocogoose_pro"/>
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
