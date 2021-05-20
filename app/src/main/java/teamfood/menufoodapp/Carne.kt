@@ -5,44 +5,114 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_carne.*
 import teamfood.menufoodapp.teamfood.menufoodapp.Preferencias
 
-private lateinit var preferencias: SharedPreferences
+
+private lateinit var storage: FirebaseFirestore
+private lateinit var usuario: FirebaseAuth
 
 class Carne : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_carne)
 
-        preferencias= getSharedPreferences("ing", Context.MODE_PRIVATE)
+        storage = FirebaseFirestore.getInstance()
+        usuario = FirebaseAuth.getInstance()
+
 
         btnPiernil.setOnClickListener(){
-            preferencias.edit().putBoolean(Preferencias.PIERNIL,true).apply()
+
+            val actividad = hashMapOf(
+                "email" to usuario.currentUser?.email.toString(),
+                "ingredientes" to "Piernil")
+
+            storage.collection("ingrediente")
+                .add(actividad)
+                .addOnSuccessListener {
+                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                }
+
             val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }
 
         btnJamon.setOnClickListener(){
-            preferencias.edit().putBoolean(Preferencias.JAMON,true).apply()
+
+            val actividad = hashMapOf(
+                "email" to usuario.currentUser?.email.toString(),
+                "ingredientes" to "Jamon")
+
+            storage.collection("ingrediente")
+                .add(actividad)
+                .addOnSuccessListener {
+                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                }
+
             val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }
 
         btnPollo.setOnClickListener(){
-            preferencias.edit().putBoolean(Preferencias.POLLO,true).apply()
+
+            val actividad = hashMapOf(
+                "email" to usuario.currentUser?.email.toString(),
+                "ingredientes" to "Pollo")
+
+            storage.collection("ingrediente")
+                .add(actividad)
+                .addOnSuccessListener {
+                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                }
+
             val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }
 
         btnRes.setOnClickListener(){
-            preferencias.edit().putBoolean(Preferencias.RES,true).apply()
+
+            val actividad = hashMapOf(
+                "email" to usuario.currentUser?.email.toString(),
+                "ingredientes" to "Carne")
+
+            storage.collection("ingrediente")
+                .add(actividad)
+                .addOnSuccessListener {
+                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                }
+
             val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }
 
         btnPescado.setOnClickListener(){
-            preferencias.edit().putBoolean(Preferencias.PESCADO,true).apply()
+            val actividad = hashMapOf(
+                "email" to usuario.currentUser?.email.toString(),
+                "ingredientes" to "Pescado")
+
+            storage.collection("ingrediente")
+                .add(actividad)
+                .addOnSuccessListener {
+                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener{
+                    Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
+                }
             val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }

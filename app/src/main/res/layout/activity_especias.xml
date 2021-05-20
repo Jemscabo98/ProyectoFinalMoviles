@@ -44,6 +44,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="40dp">
             <ImageView
+                android:id="@+id/btnPimienta"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="20dp"
@@ -64,6 +65,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="40dp">
             <ImageView
+                android:id="@+id/btnCanela"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_canela_xxxhdpi"/>
@@ -90,6 +92,7 @@
             android:layout_marginLeft="60dp">
 
             <ImageView
+                android:id="@+id/btnSal"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_sal_xxxhdpi" />
@@ -110,6 +113,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="40dp">
             <ImageView
+                android:id="@+id/btnHarina"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="20dp"
@@ -140,6 +144,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="30dp">
             <ImageView
+                android:id="@+id/btnLevadura"
                 android:layout_marginLeft="20dp"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
