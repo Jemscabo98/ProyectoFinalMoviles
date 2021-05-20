@@ -11,7 +11,7 @@ class Recomendaciones : AppCompatActivity() {
         setContentView(R.layout.activity_recomendaciones)
 
         btnVerIng.setOnClickListener(){
-            val intent: Intent = Intent(this, VerIngredientes::class.java)
+            val intent: Intent = Intent(this, Lista_Ingredientes::class.java)
             startActivity(intent)
         }
     }

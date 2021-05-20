@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_carne.*
 import kotlinx.android.synthetic.main.activity_especias.*
 
 class Especias : AppCompatActivity() {
@@ -112,5 +111,4 @@ class Especias : AppCompatActivity() {
         }
     }
 
-}
 }

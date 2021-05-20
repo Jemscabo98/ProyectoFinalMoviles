@@ -46,7 +46,7 @@ class Vegetales : AppCompatActivity() {
             storage.collection("ingrediente")
                 .add(actividad)
                 .addOnSuccessListener {
-                    //Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Se agrego el ingrediente", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener{
                     Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
@@ -128,5 +128,5 @@ class Vegetales : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    }
+
 }
