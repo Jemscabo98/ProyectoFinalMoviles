@@ -29,6 +29,7 @@ class RegistrarReceta : AppCompatActivity() {
 
         btnRegistrar.setOnClickListener {
             var intent = Intent(this, Recetas::class.java)
+            intent.putExtra("name", "RecetasSubidas")
 
             val actividad = hashMapOf(
                     "email" to usuario.currentUser?.email.toString(),
@@ -42,7 +43,7 @@ class RegistrarReceta : AppCompatActivity() {
             storage.collection("receta")
                     .add(actividad)
                     .addOnSuccessListener {
-                        Toast.makeText(this, "Se agrego la receta", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(this, "Se agrego la receta", Toast.LENGTH_SHORT).show()
                     }
                     .addOnFailureListener{
                         Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
@@ -50,35 +51,29 @@ class RegistrarReceta : AppCompatActivity() {
 
             startActivity(intent)
         }
-
-
-
-
     }
 
     fun randomNum(): Int {
         var array: ArrayList<Int> = ArrayList<Int>()
-        array.add(R.drawable.completadas_1)
-        array.add(R.drawable.completadas_2)
-        array.add(R.drawable.completadas_3)
-        array.add(R.drawable.completadas_4)
-        array.add(R.drawable.completadas_5)
-        array.add(R.drawable.completadas_6)
+        array.add(R.drawable.subidas_1)
+        array.add(R.drawable.subidas_2)
+        array.add(R.drawable.subidas_3)
+        array.add(R.drawable.subidas_4)
+        array.add(R.drawable.subidas_5)
+        array.add(R.drawable.subidas_6)
 
         return array.random()
     }
 
     fun randomIng(): ArrayList<Int> {
         var array: ArrayList<Int> = ArrayList<Int>()
-        array.add(R.drawable.icon_mango_hdpi)
-        array.add(R.drawable.icon_brocoli_ldpi)
-        array.add(R.drawable.icon_zanahoria_ldpi)
-        array.add(R.drawable.icon_espinaca_ldpi)
-        array.add(R.drawable.icon_sal_ldpi)
+        array.add(R.drawable.icon_mango_mdpi)
+        array.add(R.drawable.icon_brocoli_mdpi)
+        array.add(R.drawable.icon_zanahoria_mdpi)
+        array.add(R.drawable.icon_espinaca_mdpi)
+        array.add(R.drawable.icon_sal_mdpi)
         array.add(R.drawable.icon_queso_ldpi)
-
-
-
+        array.add(R.drawable.icon_aguacate_mdpi)
         return array
     }
 

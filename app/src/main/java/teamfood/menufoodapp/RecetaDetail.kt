@@ -1,6 +1,7 @@
 package teamfood.menufoodapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,6 +22,12 @@ class RecetaDetail : AppCompatActivity() {
         var dificultad: RatingBar = findViewById(R.id.dificultLevelReceta)
         var ingredientes: GridView = findViewById(R.id.gridIngredientes)
         var pasos: TextView = findViewById(R.id.pasosReceta)
+        var btnRegreso: Button = findViewById(R.id.btnVolver2)
+
+        btnRegreso.setOnClickListener {
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         //Asigna valores
         val bundle = intent.extras

@@ -12,8 +12,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="85dp"
-            android:layout_height="113dp"
+            android:layout_width="112dp"
+            android:layout_height="150dp"
             android:src="@drawable/favoritas_1"
             android:layout_gravity="center"
             android:id="@+id/imgPresentacion"/>
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Hot Cakes"
             android:textAlignment="center"
-            android:textSize="15sp"
+            android:textSize="25sp"
             android:textColor="@color/verde"
             android:fontFamily="sans-serif-light"
             android:layout_marginTop="5dp"
