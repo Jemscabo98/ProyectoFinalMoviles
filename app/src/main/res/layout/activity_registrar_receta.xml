@@ -20,13 +20,31 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin">
 
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imagenReceta"
-                android:layout_width="150dp"
+                android:layout_width="300dp"
                 android:layout_height="150dp"
+                android:src="@drawable/pizza_img"
+                android:scaleType="centerCrop"
                 android:layout_gravity="center"
-                android:src="@drawable/icon_manzana_xxxhdpi"
-                android:background="@drawable/round_button"/>
+                app:shapeAppearanceOverlay="@style/circular"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:background="@drawable/round_corner_button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="5dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_corner_button"
+                />
 
             <EditText
                 android:id="@+id/nombreReceta"

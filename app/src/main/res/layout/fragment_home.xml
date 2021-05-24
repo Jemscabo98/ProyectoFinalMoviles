@@ -41,9 +41,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textSize="25sp"
+                        android:textSize="28sp"
                         android:textColor="@color/verde"
-                        android:fontFamily="@font/cocogoose_pro"
+                        android:fontFamily="@font/montserrat_extrabold"
                         android:text="Erik Galvan"
                         />
 
