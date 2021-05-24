@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/imgIngr"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/icon_cebolla_xxxhdpi"/>
 
         <TextView
@@ -21,17 +21,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cebolla"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:fontFamily="@font/cocogoose_pro_light_italic"
             android:paddingLeft="10dp"
             android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
 
-    <ToggleButton
+    <Switch
         android:id="@+id/btnOnOff"
-        android:layout_width="75dp"
-        android:layout_height="45dp"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_gravity="center_vertical"/>
 

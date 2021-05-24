@@ -1,4 +1,4 @@
-package teamfood.menufoodapp
+package teamfood.menufoodapp.ui.home
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,9 @@ import android.view.ViewGroup
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.io.Serializable
+import teamfood.menufoodapp.MainActivity
+import teamfood.menufoodapp.R
+import teamfood.menufoodapp.teamfood.menufoodapp.ui.home.Receta
 
 class Recetas : AppCompatActivity() {
     var adapter: RecetaAdapter? =null
@@ -66,7 +68,8 @@ class Recetas : AppCompatActivity() {
                             it.getDouble("dificultad"),
                             ing,
                             it.getString("pasos"),
-                            it.getString("clasificacion")))
+                            it.getString("clasificacion"))
+                        )
                     }
 
                     if (it.getString("clasificacion") == "RecetasSubidas"){
@@ -76,7 +79,8 @@ class Recetas : AppCompatActivity() {
                                 it.getDouble("dificultad"),
                                 ing,
                                 it.getString("pasos"),
-                                it.getString("clasificacion")))
+                                it.getString("clasificacion"))
+                        )
                     }
 
                     if (it.getString("clasificacion") == "RecetasFavoritas"){
@@ -86,7 +90,8 @@ class Recetas : AppCompatActivity() {
                                 it.getDouble("dificultad"),
                                 ing,
                                 it.getString("pasos"),
-                                it.getString("clasificacion")))
+                                it.getString("clasificacion"))
+                        )
                     }
                 }
 

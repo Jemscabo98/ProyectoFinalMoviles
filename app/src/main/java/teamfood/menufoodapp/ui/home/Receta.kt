@@ -1,4 +1,4 @@
-package teamfood.menufoodapp
+package teamfood.menufoodapp.teamfood.menufoodapp.ui.home
 
 data class Receta  (var nombre: String?,
                     var imagen: Double?,

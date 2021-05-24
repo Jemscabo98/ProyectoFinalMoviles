@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
-                android:text="Ingredientes Favoritos:"
+                android:text="Últimos Ingredientes Usados:"
                 android:textSize="15sp"
                 android:textColor="@color/verde"
                 android:fontFamily="@font/cocogoose_pro"
@@ -92,7 +92,7 @@
                     android:id="@+id/gridIngredientesFav"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numColumns="6"/>
+                    android:numColumns="8"/>
 
             </LinearLayout>
 
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="@dimen/activity_vertical_double_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_double_margin">
 
@@ -108,8 +108,7 @@
                         android:id="@+id/btnRecetasCompletas"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:text="Recetas Completadas:\n7"
-                        android:textAlignment="viewStart"
+                        android:text="Recetas Completadas:"
                         android:background="@drawable/round_button"
                         android:fontFamily="@font/cocogoose_pro_ultralight_italic"
                         android:textColor="@color/white"
@@ -120,8 +119,7 @@
                         android:id="@+id/btnRecetasSubidas"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:text="Recetas subidas:\n2"
-                        android:textAlignment="viewStart"
+                        android:text="Recetas subidas:"
                         android:background="@drawable/round_button"
                         android:fontFamily="@font/cocogoose_pro_ultralight_italic"
                         android:textColor="@color/white"
@@ -132,8 +130,7 @@
                         android:id="@+id/btnRecetasFavoritas"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:text="Favoritas:\n1"
-                        android:textAlignment="viewStart"
+                        android:text="Favoritas:"
                         android:background="@drawable/round_button"
                         android:fontFamily="@font/cocogoose_pro_ultralight_italic"
                         android:textColor="@color/white"

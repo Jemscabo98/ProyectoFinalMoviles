@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarReceta"
+    tools:context=".ui.home.RegistrarReceta"
     android:orientation="vertical"
     android:background="@drawable/fondo_trabajo">
     <ScrollView
@@ -112,6 +112,7 @@
                     android:id="@+id/gridRegistro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:numColumns="8"
                     android:layout_marginRight="@dimen/activity_horizontal_double_margin"
                     android:layout_marginLeft="@dimen/activity_horizontal_margin">
                 </GridView>
@@ -152,6 +153,22 @@
                     android:textSize="18sp"
                     android:fontFamily="@font/cocogoose_pro"
                     android:layout_gravity="bottom|right"
+                    android:paddingTop="3dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_double_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_double_margin"
+                    android:layout_marginBottom="64dp"/>
+
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="115dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/round_button"
+                    android:text="@string/receta6"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/cocogoose_pro"
+                    android:layout_gravity="bottom|left"
                     android:paddingTop="3dp"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_horizontal_double_margin"

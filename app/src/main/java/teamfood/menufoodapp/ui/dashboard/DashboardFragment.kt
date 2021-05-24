@@ -1,7 +1,6 @@
 package teamfood.menufoodapp.ui.dashboard
 
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 import teamfood.menufoodapp.Pizzaclasica
 import teamfood.menufoodapp.R
-import teamfood.menufoodapp.Recetas
-import teamfood.menufoodapp.RegistrarReceta
+import teamfood.menufoodapp.ui.home.RegistrarReceta
 
 class DashboardFragment : Fragment() {
 

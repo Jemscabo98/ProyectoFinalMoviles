@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -24,6 +25,7 @@ import java.net.URL
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+    var adapter: IngredientesAdapter? =null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,8 +46,19 @@ class HomeFragment : Fragment() {
         val btnSubirReceta: Button = root.findViewById(R.id.btnSubirReceta)
         val nombre_usuario: TextView = root.findViewById(R.id.nombre_usuario)
         val img_usuario: ShapeableImageView = root.findViewById(R.id.imgPerfil)
+        val ingredientes: GridView = root.findViewById(R.id.gridIngredientesFav)
 
         lookData()
+
+        //Cargar ingredientes
+        if (listaIngrediente.isNotEmpty()){
+            var Listaingr = ArrayList<Int>()
+            for (n in listaIngrediente){
+                Listaingr.add(n.icon)
+            }
+            adapter = IngredientesAdapter(activity, Listaingr)
+            ingredientes.adapter = adapter
+        }
 
         try {
             val url: URL = URL(pic)

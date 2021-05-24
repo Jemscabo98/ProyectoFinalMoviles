@@ -1,4 +1,4 @@
-package teamfood.menufoodapp
+package teamfood.menufoodapp.ui.home
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.google.android.material.imageview.ShapeableImageView
+import teamfood.menufoodapp.MainActivity
+import teamfood.menufoodapp.R
 
 class RecetaDetail : AppCompatActivity() {
     var adapter: IngredientesAdapter? =null

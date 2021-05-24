@@ -1,4 +1,4 @@
-package teamfood.menufoodapp
+package teamfood.menufoodapp.ui.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,10 +7,14 @@ import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_registrar_receta.*
+import teamfood.menufoodapp.MainActivity
+import teamfood.menufoodapp.R
 
 class RegistrarReceta : AppCompatActivity() {
     private lateinit var storage: FirebaseFirestore
     private lateinit var usuario: FirebaseAuth
+    var adapter: IngredientesAdapter? =null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +27,30 @@ class RegistrarReceta : AppCompatActivity() {
         val ingredientes: GridView = findViewById(R.id.gridRegistro)
         val pasos: EditText = findViewById(R.id.pasosRecetas)
         val btnRegistrar: Button = findViewById(R.id.btnRegistrarReceta)
+        val btnCancelar: Button = findViewById(R.id.btnCancelar)
         val spinner: Spinner = findViewById(R.id.spinner)
 
         storage = FirebaseFirestore.getInstance()
         usuario = FirebaseAuth.getInstance()
+        var Listaingr = ArrayList<Int>()
+
+        val bundle = intent.extras
+        if (bundle != null){
+            nombreReceta.setText(bundle.getString("nombre"))
+            imagenReceta.setImageResource(bundle.getInt("imagen"))
+            dificultLevel.rating = bundle.getFloat("dificultad")
+            pasos.setText(bundle.getString("pasos"))
+        }
+
+
+        //Cargar ingredientes
+        if (listaIngrediente.isNotEmpty()){
+            for (n in listaIngrediente){
+                Listaingr.add(n.icon)
+            }
+            adapter = IngredientesAdapter(this, Listaingr)
+            ingredientes.adapter = adapter
+        }
 
         //Conecciones al spinner
         val lista: ArrayList<String> = SpinnerLista()
@@ -76,6 +100,7 @@ class RegistrarReceta : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {   }
         }
 
+        //Registrar receta
         btnRegistrar.setOnClickListener {
             var intent = Intent(this, Recetas::class.java)
             intent.putExtra("name", "RecetasSubidas")
@@ -85,7 +110,7 @@ class RegistrarReceta : AppCompatActivity() {
                     "nombre" to nombreReceta.text.toString(),
                     "imagen" to imagen,
                     "dificultad" to dificultLevel.rating,
-                    "ingredientes" to randomIng(),
+                    "ingredientes" to Listaingr,
                     "pasos" to pasos.text.toString(),
                     "clasificacion" to "RecetasSubidas")
 
@@ -98,6 +123,24 @@ class RegistrarReceta : AppCompatActivity() {
                         Toast.makeText(this, "No se agrego la receta", Toast.LENGTH_SHORT).show()
                     }
 
+            startActivity(intent)
+        }
+
+        //Cancelar receta
+        btnCancelar.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        // Nos manda a escoger los ingredientes
+        btnIngredientes.setOnClickListener {
+            var intent = Intent(this, SeleccionarIngredientes::class.java)
+            listaIngrediente.clear()
+            intent.putExtra("nombre", nombreReceta.text.toString())
+            intent.putExtra("imagen", imagen)
+            intent.putExtra("dificultad", dificultLevel.rating)
+            intent.putExtra("pasos", pasos.text.toString())
             startActivity(intent)
         }
     }
@@ -125,18 +168,6 @@ class RegistrarReceta : AppCompatActivity() {
         array.add(R.drawable.subidas_6)
 
         return array.random()
-    }
-
-    fun randomIng(): ArrayList<Int> {
-        var array: ArrayList<Int> = ArrayList<Int>()
-        array.add(R.drawable.icon_mango_mdpi)
-        array.add(R.drawable.icon_brocoli_mdpi)
-        array.add(R.drawable.icon_zanahoria_mdpi)
-        array.add(R.drawable.icon_espinaca_mdpi)
-        array.add(R.drawable.icon_sal_mdpi)
-        array.add(R.drawable.icon_queso_ldpi)
-        array.add(R.drawable.icon_aguacate_mdpi)
-        return array
     }
 
 }
