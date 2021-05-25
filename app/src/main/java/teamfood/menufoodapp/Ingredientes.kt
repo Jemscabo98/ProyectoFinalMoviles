@@ -3,8 +3,8 @@ package teamfood.menufoodapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
-import kotlinx.android.synthetic.main.activity_ingredientes.*
 
 class Ingredientes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +13,7 @@ class Ingredientes : AppCompatActivity() {
         val ingCarne: ImageView = findViewById(R.id.ingCarne) as ImageView
         val ingVerd: ImageView = findViewById(R.id.ingVerd) as ImageView
         val ingEsp: ImageView = findViewById(R.id.ingEsp) as ImageView
+        val btnIrRecetas = findViewById(R.id.btnIrRecetas) as Button
 
         ingCarne.setOnClickListener(){
             val intent: Intent = Intent(this, Carne::class.java)

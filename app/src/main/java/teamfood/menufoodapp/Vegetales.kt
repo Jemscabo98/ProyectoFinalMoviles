@@ -3,11 +3,11 @@ package teamfood.menufoodapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_carne.*
-import kotlinx.android.synthetic.main.activity_vegetales.*
+
 
 class Vegetales : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +16,13 @@ class Vegetales : AppCompatActivity() {
 
         var storage = FirebaseFirestore.getInstance()
         var usuario = FirebaseAuth.getInstance()
+
+        val btnZanahoria = findViewById(R.id.btnZanahoria) as ImageView
+        val btnCebolla = findViewById(R.id.btnCebolla) as ImageView
+        val btnRabano = findViewById(R.id.btnRabano) as ImageView
+        val btnApio = findViewById(R.id.btnApio) as ImageView
+        val btnAjo = findViewById(R.id.btnAjo) as ImageView
+        val btnBrocoli = findViewById(R.id.btnBrocoli) as ImageView
 
 
         btnZanahoria.setOnClickListener(){

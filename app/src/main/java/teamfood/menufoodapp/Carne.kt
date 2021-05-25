@@ -5,11 +5,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_carne.*
-import teamfood.menufoodapp.teamfood.menufoodapp.Preferencias
+
 
 
 private lateinit var storage: FirebaseFirestore
@@ -22,6 +22,12 @@ class Carne : AppCompatActivity() {
 
         storage = FirebaseFirestore.getInstance()
         usuario = FirebaseAuth.getInstance()
+
+        val btnPiernil = findViewById(R.id.btnPiernil) as ImageView
+        val btnJamon = findViewById(R.id.btnJamon) as ImageView
+        val btnPollo = findViewById(R.id.btnPollo) as ImageView
+        val btnRes = findViewById(R.id.btnRes) as ImageView
+        val btnPescado = findViewById(R.id.btnPescado) as ImageView
 
 
         btnPiernil.setOnClickListener(){
