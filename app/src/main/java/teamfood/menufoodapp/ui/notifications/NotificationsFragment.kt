@@ -48,7 +48,7 @@ class NotificationsFragment : Fragment() {
         }
 
         imgApr.setOnClickListener(){
-            val intent: Intent = Intent(requireActivity(), Mexicana::class.java).apply{}
+            val intent: Intent = Intent(requireActivity(), Aprende::class.java).apply{}
             startActivity(intent)
         }
 
