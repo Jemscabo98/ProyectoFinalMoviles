@@ -10,9 +10,9 @@ class Recomendaciones : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recomendaciones)
 
-        btnVerIng.setOnClickListener(){
+        /*btnVerIng.setOnClickListener(){
             val intent: Intent = Intent(this, Lista_Ingredientes::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }

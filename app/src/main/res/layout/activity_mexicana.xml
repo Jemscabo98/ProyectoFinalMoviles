@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondo_trabajo"
     tools:context=".Mexicana">
 
     <RelativeLayout
@@ -56,6 +57,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="50dp">
             <ImageView
+                android:id="@+id/btnTacos"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_chile_xxhdpi"/>
@@ -75,6 +77,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="64dp">
             <ImageView
+                android:id="@+id/btnCaldos"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_tomate_xxhdpi"/>
@@ -100,6 +103,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="50dp">
             <ImageView
+                android:id="@+id/btnPlatillos"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_mexicano_hdpi"/>
@@ -119,6 +123,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="26dp">
             <ImageView
+                android:id="@+id/btnGorditas"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_marginLeft="20dp"
@@ -146,6 +151,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="50dp">
             <ImageView
+                android:id="@+id/btnTamales"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:src="@drawable/icon_explorar_xhdpi"/>

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import kotlinx.android.synthetic.main.activity_ingredientes.*
 
 class Ingredientes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,11 @@ class Ingredientes : AppCompatActivity() {
 
         ingEsp.setOnClickListener(){
             val intent: Intent = Intent(this, Especias::class.java)
+            startActivity(intent)
+        }
+
+        btnIrRecetas.setOnClickListener(){
+            val intent: Intent = Intent(this, Recomendaciones::class.java)
             startActivity(intent)
         }
     }
