@@ -70,7 +70,8 @@
                     android:id="@+id/imgPizzaClasica"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/completadas_5"
+                    android:src="@drawable/completadas_5"
+                    android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/circular" />
 
 
@@ -86,7 +87,8 @@
                     android:id="@+id/imgChiken"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/chiken_img"
+                    android:src="@drawable/chiken_img"
+                    android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/circular" />
             </LinearLayout>
 
@@ -100,7 +102,8 @@
                     android:id="@+id/imgCake"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/cake_img"
+                    android:src="@drawable/cake_img"
+                    android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/circular" />
             </LinearLayout>
 
@@ -148,7 +151,7 @@
                         android:layout_height="120dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:background="@drawable/favoritas_4"/>
+                        android:src="@drawable/favoritas_4"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -163,7 +166,7 @@
                         android:layout_height="120dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="5dp"
-                        android:background="@drawable/favoritas_3"/>
+                        android:src="@drawable/favoritas_3"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -204,7 +207,8 @@
                     android:id="@+id/registrarReceta"
                     android:layout_width="280dp"
                     android:layout_height="180dp"
-                    android:background="@drawable/completadas_6"
+                    android:src="@drawable/completadas_6"
+                    android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/circular" />
             </LinearLayout>
 
@@ -246,7 +250,8 @@
                     android:id="@+id/imgDeChef"
                     android:layout_width="280dp"
                     android:layout_height="180dp"
-                    android:background="@drawable/completadas_2"
+                    android:src="@drawable/completadas_2"
+                    android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/circular" />
             </LinearLayout>
 
