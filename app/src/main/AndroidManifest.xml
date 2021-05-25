@@ -15,7 +15,6 @@
         <activity android:name=".Aprende" />
         <activity android:name=".ui.home.SeleccionarIngredientes" />
         <activity android:name=".Lista_Ingredientes" />
-        <activity android:name=".VerIngredientes" />
         <activity android:name=".Recomendaciones" />
         <activity android:name=".Vegetales" />
         <activity android:name=".Especias" />

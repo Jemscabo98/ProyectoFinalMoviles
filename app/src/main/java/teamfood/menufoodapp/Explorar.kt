@@ -10,8 +10,6 @@ import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_explorar.*
-import kotlinx.android.synthetic.main.fragment_notifications.*
 
 class Explorar : AppCompatActivity() {
     private var adaptador: AdaptadorIng?=null
@@ -71,19 +69,7 @@ class Explorar : AppCompatActivity() {
     }
 
     fun llenar(eleccion: String){
-        if(eleccion=="carne"){
-            fillCarne()
-            text_explorar.setText("Carne")
-            icon_exp.setImageResource(R.drawable.icon_pierna_xxxhdpi)
-        } else if(eleccion=="verdura"){
-            fillVerduras()
-            text_explorar.setText("Carne")
-            icon_exp.setImageResource(R.drawable.icon_zanahoria_xxxhdpi)
-        } else if(eleccion=="especia"){
-            fillEspecias()
-            text_explorar.setText("Verduras")
-            icon_exp.setImageResource(R.drawable.icon_pimienta_xxxhdpi)
-        }
+
     }
 
     fun fillCarne(){
