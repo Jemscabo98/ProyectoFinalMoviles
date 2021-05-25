@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MenuFoodApp">
-        <activity android:name=".Aprende"></activity>
+        <activity android:name=".Ensalada"></activity>
+        <activity android:name=".Cake" />
+        <activity android:name=".BrochetaPollo" />
+        <activity android:name=".Aprende" />
         <activity android:name=".ui.home.SeleccionarIngredientes" />
         <activity android:name=".Lista_Ingredientes" />
         <activity android:name=".VerIngredientes" />

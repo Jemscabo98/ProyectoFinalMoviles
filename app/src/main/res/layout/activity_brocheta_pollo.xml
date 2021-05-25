@@ -27,7 +27,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/pizza_img"
+                    android:background="@drawable/chiken_img"
                     app:shapeAppearanceOverlay="@style/circular" />
             </RelativeLayout>
 
@@ -39,13 +39,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/imgPizzaClasica"
+                    android:id="@+id/imgChiken"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Pizza clasica"
+                    android:text="Brocheta de pollo"
                     android:textAlignment="center"
                     android:textColor="@color/verde"
                     android:textSize="24sp" />
@@ -67,20 +67,20 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/iconCarne"
+                    android:id="@+id/imgPimienta"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/icon_carne_xxxhdpi"
+                    android:src="@drawable/icon_pimienta_xxxhdpi"
                     android:background="@drawable/round_button"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_horizontal_margin"/>
 
                 <ImageView
-                    android:id="@+id/imgPimienta"
+                    android:id="@+id/iconCarne"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/icon_pimienta_xxxhdpi"
+                    android:src="@drawable/icon_carne_xxxhdpi"
                     android:background="@drawable/round_button"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -122,7 +122,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Poner todos los ingredientes cecos en un recipiente."
+                    android:text="Filetear la pechuga (en tiras y después en cubitos)."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -146,7 +146,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Si utiliza levadura instantanea (10grs) mezclela con la harina, y si es levadura prensada disolverla con el agua a temperatura ambiente"
+                    android:text="Cortar la cebolla en cuadros grandes de 2 x 2 cm aprox. (Del mismo tamaño que el pollo)"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -170,7 +170,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Agregar el agua al recipiente. Mezclar hasta que el liquido haya sido absorbido"
+                    android:text="Sazonar la pechuga con la sal, ajo molido y el sazonador de pimienta-limón."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -194,7 +194,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Volcar la masa sobre una mesada y comensar a amasar. Si la masa se vuelve pegajosa, puede untarse las manos con aceite o agregar mas harina."
+                    android:text="Tomar un palillo y barnizarlo con aceite (esto evitará que se queme). Insertar un cuadrito de pollo, y uno de cebolla y así sucesivamente hasta llenar el palo dejando un pedazo para sostener. Espolvorea un poco del sazonador."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -218,7 +218,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Amasar hasta tener una masa homogenea. Dejar leudar en un lugar tibio, tapada."
+                    android:text="Poner en la parrilla hasta que todo esté cocido cuidando que no s epase de cocción para que el pollo quede jugoso."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -242,55 +242,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Cuando a masa haya duplicado su volumen, dividir en 2 bollos y estirarlos cada uno sobre una pizzera aceitada."
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/Paso7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/cocogoose_pro_italic"
-                    android:text="Paso 7"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/verde"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/Paso7_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/cocogoose_pro"
-                    android:text="Untar 2 o 3 cucharadas de salsa de tomate y dejar descansar 30 minutos para que vuelvan a leudar."
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/Paso8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/cocogoose_pro_italic"
-                    android:text="Paso 8"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/verde"
-                    android:textSize="24sp" />
-
-                <TextView
-                    android:id="@+id/Paso8_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/cocogoose_pro"
-                    android:text="Cocinar en horno caliente 15 minutos, retirar, agregar la salsa de su preferencia, el queso y los demas ingredientes que quieras, y terminar la coccion"
+                    android:text="Preparación Filetear la pechuga (en tiras y después en cubitos). Cortar la cebolla en cuadros grandes de 2 x 2 cm aprox. (Del mismo tamaño que el pollo) Sazonar la pechuga con la sal, ajo molido y el sazonador de pimienta-limón. Tomar un palillo y barnizarlo con aceite (esto evitará que se queme). Insertar un cuadrito de pollo, y uno de cebolla y así sucesivamente hasta llenar el palo dejando un pedazo para sostener. Espolvorea un poco del sazonador. Poner en la parrilla hasta que todo esté cocido cuidando que no s epase de cocción para que el pollo quede jugoso. Bañar con el aderezo de su preferencia, en este caso utilice salsa chimichurri y salsa barbeque."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="12sp" />

@@ -83,6 +83,7 @@
                 android:layout_marginTop="30dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgChiken"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
                     android:background="@drawable/chiken_img"
@@ -96,6 +97,7 @@
                 android:layout_marginTop="30dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgCake"
                     android:layout_width="300dp"
                     android:layout_height="150dp"
                     android:background="@drawable/cake_img"
@@ -141,6 +143,7 @@
                     android:layout_marginLeft="60dp">
 
                     <ImageView
+                        android:id="@+id/imgEnsalada"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_marginTop="5dp"
