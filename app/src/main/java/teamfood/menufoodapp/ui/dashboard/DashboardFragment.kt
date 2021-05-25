@@ -10,8 +10,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import teamfood.menufoodapp.Pizzaclasica
-import teamfood.menufoodapp.R
+import teamfood.menufoodapp.*
 import teamfood.menufoodapp.ui.home.RegistrarReceta
 
 class DashboardFragment : Fragment() {
@@ -31,7 +30,10 @@ class DashboardFragment : Fragment() {
         val btnPizzaClasica: com.google.android.material.imageview.ShapeableImageView = root.findViewById(R.id.imgPizzaClasica)
         val btnChiken: com.google.android.material.imageview.ShapeableImageView = root.findViewById(R.id.imgChiken)
         val btnCake: com.google.android.material.imageview.ShapeableImageView = root.findViewById(R.id.imgCake)
+        val btnEnsalada: ImageView = root.findViewById(R.id.imgEnsalada)
+        val btnPasta: ImageView = root.findViewById(R.id.imgPasta)
         val btnRegistrarReceta: ImageView = root.findViewById(R.id.registrarReceta)
+        val btnDeChef: ImageView = root.findViewById(R.id.imgDeChef)
 
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
 
@@ -41,17 +43,32 @@ class DashboardFragment : Fragment() {
             }
 
             btnChiken.setOnClickListener{
-                val intent: Intent = Intent(requireActivity(), Pizzaclasica::class.java)
+                val intent: Intent = Intent(requireActivity(), BrochetaPollo::class.java)
                 startActivity(intent)
             }
 
             btnCake.setOnClickListener{
-                val intent: Intent = Intent(requireActivity(), Pizzaclasica::class.java)
+                val intent: Intent = Intent(requireActivity(), Cake::class.java)
+                startActivity(intent)
+            }
+
+            btnEnsalada.setOnClickListener{
+                val intent: Intent = Intent(requireActivity(), Ensalada::class.java)
+                startActivity(intent)
+            }
+
+            btnPasta.setOnClickListener{
+                val intent: Intent = Intent(requireActivity(), Ensalada::class.java)
                 startActivity(intent)
             }
 
             btnRegistrarReceta.setOnClickListener{
                 val intent: Intent = Intent(requireActivity(), RegistrarReceta::class.java)
+                startActivity(intent)
+            }
+
+            btnDeChef.setOnClickListener{
+                val intent: Intent = Intent(requireActivity(), Recomendaciones::class.java)
                 startActivity(intent)
             }
 

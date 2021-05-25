@@ -27,7 +27,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="300dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/chiken_img"
+                    android:background="@drawable/cake_img"
                     app:shapeAppearanceOverlay="@style/circular" />
             </RelativeLayout>
 
@@ -45,7 +45,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cocogoose_pro"
-                    android:text="Brocheta de pollo"
+                    android:text="Pastel"
                     android:textAlignment="center"
                     android:textColor="@color/verde"
                     android:textSize="24sp" />
