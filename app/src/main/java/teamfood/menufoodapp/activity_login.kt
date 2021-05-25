@@ -14,7 +14,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
-import kotlinx.android.synthetic.main.activity_login.*
 
 
 const val RC_SIGN_IN = 343
@@ -41,12 +40,13 @@ class activity_login : AppCompatActivity() {
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
+        val sign_in_button: com.google.android.gms.common.SignInButton = findViewById(R.id.sign_in_button)
         sign_in_button.setOnClickListener{
             val signInIntent = mGoogleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
 
-
+        val loginFirebase: Button= findViewById(R.id.loginFirebase)
         loginFirebase.setOnClickListener {
             val intent: Intent = Intent(this, LoginActivityFirebase::class.java)
             startActivity(intent)

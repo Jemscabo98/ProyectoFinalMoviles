@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_registrar_receta.*
 import teamfood.menufoodapp.MainActivity
 import teamfood.menufoodapp.R
 
