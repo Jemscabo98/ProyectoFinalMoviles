@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp" />
+        android:layout_marginVertical="20dp"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -47,6 +47,7 @@
             android:text="Registrar"
             android:layout_width="match_parent"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="70dp"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:textColor="@color/white"

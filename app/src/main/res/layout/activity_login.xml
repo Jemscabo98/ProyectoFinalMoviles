@@ -23,8 +23,8 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Hola!"
-        android:textSize="100sp"
+        android:text="Tap-Tapp"
+        android:textSize="70sp"
         android:textStyle="bold"
         android:textColor="@color/black"
 
@@ -37,7 +37,7 @@
         android:id="@+id/tv_name2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrate con:"
+        android:text="Inicia sesión con:"
         android:textColor="@color/white"
         android:textSize="40dp"
 
@@ -49,8 +49,8 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,14 +59,14 @@
 
     <Button
         android:id="@+id/loginFirebase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
         android:text="Iniciar sesion"
         app:layout_constraintBottom_toBottomOf="@+id/imgPizzaClasica"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.120" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
